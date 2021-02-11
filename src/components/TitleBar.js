@@ -5,11 +5,13 @@ export default function TitleBar() {
     <nav className="TitleBar">
       <div className="TitleBar__content">
         <h1 className="TitleBar__nameplate">
-          Money Goals
+          MONEY GOALS
         </h1>
         <button className="TitleBar__user-button">
           <img src={Person} />
-          <span className="TitleBar__user-name">Alex</span>
+          <span className="TitleBar__user-name">
+            Alex
+          </span>
         </button>
       </div>
     </nav>

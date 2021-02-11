@@ -20,7 +20,8 @@
     "babel-preset-nano-react-app": "^0.1.0",
     "cssnano": "^4.1.10",
     "parcel-bundler": "^1.11.0",
-    "parcel-plugin-clean-dist": "0.0.6"
+    "parcel-plugin-clean-dist": "0.0.6",
+    "prettier": "2.2.1"
   },
   "babel": {
     "presets": [

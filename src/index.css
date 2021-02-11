@@ -1,5 +1,5 @@
 html {
-  font: 15px Helvetica, sans-serif;
+  font: 13px Helvetica, sans-serif;
 }
 
 body {
@@ -12,22 +12,65 @@ button {
 
 .App {
   background-color: #EEEEEE;
+  color: #222222;
   height: 100%;
   position: fixed;
   width: 100%;
 }
 
+.App__content {
+  box-sizing: border-box;
+  margin: 0 auto;
+  max-width: 100%;
+  padding: 0 12px;
+  width: 1024px;
+}
+
+.EventCreationForm {
+  background-color: #FFFFFF;
+  border: 1px solid #BBBBBB;
+  border-radius: 2px;
+  box-shadow: 0 4px 4px #CCCCCC;
+  margin: 16px 0;
+  padding: 24px;
+}
+
+.EventCreationForm__account-select {
+  appearance: none;
+  background-color: transparent;
+  background-image: url(./images/expand_more-24px.svg);
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: 24px;
+  border: 1px solid #BBBBBB;
+  box-shadow: 0 2px 2px #CCCCCC;
+  color: #222222;
+  cursor: pointer;
+  font: 13px Helvetica, sans-serif;
+  padding: 4px 8px;
+}
+
+.EventCreationForm__currency-input {
+  border: 1px solid #BBBBBB;
+  box-shadow: 0 2px 2px #CCCCCC;
+  color: #222222;
+  cursor: pointer;
+  font: 13px Helvetica, sans-serif;
+  padding: 4px 8px;
+}
+
+.EventCreationForm__label {
+  margin: 0 4px;
+}
+
+.EventCreationForm__label-text {
+  margin: 0 6px;
+}
+
 .TitleBar {
-  align-items: center;
   background-color: #FFFFFF;
   border-bottom: 1px solid #BBBBBB;
   box-shadow: 0 8px 8px #CCCCCC;
-  box-sizing: border-box;
-  display: flex;
-  flex-flow: row nowrap;
-  height: 56px;
-  justify-content: center;
-  padding: 0 16px;
   position: sticky;
   top: 0;
   user-select: none;
@@ -38,23 +81,23 @@ button {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
+  margin: 0 auto;
+  max-width: 100%;
   width: 1024px;
 }
 
 .TitleBar__nameplate {
-  color: #222222;
   font-size: 1.2rem;
-  margin: 0;
+  margin: 0 12px;
 }
 
 .TitleBar__user-button {
   align-items: center;
   background-color: #FFFFFF;
-  border: 1px solid #BBBBBB;
-  border-radius: 4px;
+  border: none;
   display: flex;
   outline: none;
-  padding: 4px 12px;
+  padding: 8px 12px;
   -webkit-tap-highlight-color: transparent;
 }
 
@@ -66,4 +109,34 @@ button {
   font-size: 1rem;
   font-weight: bold;
   margin: 0 4px;
+}
+
+@media (max-width: 800px) {
+  .EventCreationForm {
+    display: flex;
+    flex-flow: column wrap;
+  }
+
+  .EventCreationForm__account-select {
+    flex: 1 0 auto;
+  }
+
+  .EventCreationForm__currency-input {
+    flex: 1 0 auto;
+  }
+
+  .EventCreationForm__label {
+    align-items: center;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    margin: 8px 0;
+    width: 100%;
+  }
+
+  .EventCreationForm__label-text {
+    flex: 0 0 25%;
+    margin: 0 8px;
+    text-align: right;
+  }
 }
