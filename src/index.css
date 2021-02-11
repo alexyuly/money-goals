@@ -7,7 +7,7 @@ body {
 }
 
 .App {
-  background-color: #EEEEEE;
+  background-color: #eeeeee;
   color: #222222;
   height: 100%;
   position: fixed;
@@ -23,10 +23,10 @@ body {
 }
 
 .EventCreationForm {
-  background-color: #FFFFFF;
-  border: 1px solid #BBBBBB;
+  background-color: #ffffff;
+  border: 1px solid #bbbbbb;
   border-radius: 2px;
-  box-shadow: 0 4px 4px #CCCCCC;
+  box-shadow: 0 4px 4px #cccccc;
   margin: 16px 0;
   padding: 24px;
 }
@@ -36,9 +36,9 @@ body {
   background-image: url(./images/expand_more-24px.svg);
   background-repeat: no-repeat;
   background-position: right;
-  border: 1px solid #BBBBBB;
+  border: 1px solid #bbbbbb;
   border-radius: 2px;
-  box-shadow: 0 2px 2px #CCCCCC;
+  box-shadow: 0 2px 2px #cccccc;
   color: #222222;
   cursor: pointer;
   font: 13px Helvetica, sans-serif;
@@ -46,9 +46,9 @@ body {
 }
 
 .EventCreationForm__currency-input {
-  border: 1px solid #BBBBBB;
+  border: 1px solid #bbbbbb;
   border-radius: 2px;
-  box-shadow: 0 2px 2px #CCCCCC;
+  box-shadow: 0 2px 2px #cccccc;
   color: #222222;
   cursor: pointer;
   font: 13px Helvetica, sans-serif;
@@ -64,9 +64,9 @@ body {
 }
 
 .TitleBar {
-  background-color: #FFFFFF;
-  border-bottom: 1px solid #BBBBBB;
-  box-shadow: 0 8px 8px #CCCCCC;
+  background-color: #ffffff;
+  border-bottom: 1px solid #bbbbbb;
+  box-shadow: 0 8px 8px #cccccc;
   position: sticky;
   top: 0;
   user-select: none;
@@ -89,9 +89,9 @@ body {
 
 .TitleBar__user-button {
   align-items: center;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   border: none;
-  border-bottom: 1px solid #FFFFFF;
+  border-bottom: 1px solid #ffffff;
   cursor: pointer;
   display: flex;
   outline: none;
@@ -100,12 +100,12 @@ body {
 }
 
 .TitleBar__user-button:hover {
-  background-color: #EEEEEE;
-  border-bottom: 1px solid #BBBBBB;
+  background-color: #eeeeee;
+  border-bottom: 1px solid #bbbbbb;
 }
 
 .TitleBar__user-button:active {
-  background-color: #DDDDDD;
+  background-color: #dddddd;
 }
 
 .TitleBar__user-name {
