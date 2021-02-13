@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Cookie&family=Montserrat&display=swap');
+
 html {
-  font: 13px Helvetica, sans-serif;
+  font: 13px 'Montserrat', sans-serif;
 }
 
 body {
@@ -27,8 +29,10 @@ body {
   border: 1px solid #bbbbbb;
   border-radius: 2px;
   box-shadow: 0 4px 4px #cccccc;
+  box-sizing: border-box;
   margin: 16px 0;
   padding: 24px;
+  position: relative;
 }
 
 .EventCreationForm__account-select {
@@ -41,8 +45,8 @@ body {
   box-shadow: 0 2px 2px #cccccc;
   color: #222222;
   cursor: pointer;
-  font: 13px Helvetica, sans-serif;
-  padding: 4px 8px;
+  font: 13px 'Montserrat', sans-serif;
+  padding: 4px 24px 4px 8px;
 }
 
 .EventCreationForm__currency-input {
@@ -51,7 +55,7 @@ body {
   box-shadow: 0 2px 2px #cccccc;
   color: #222222;
   cursor: pointer;
-  font: 13px Helvetica, sans-serif;
+  font: 13px 'Montserrat', sans-serif;
   padding: 4px 8px;
 }
 
@@ -61,6 +65,17 @@ body {
 
 .EventCreationForm__label-text {
   margin: 0 6px;
+}
+
+.EventCreationForm__ribbon {
+  left: -1px;
+  position: absolute;
+  top: -1px;
+}
+
+.EventCreationForm__ribbon-path {
+  fill: #008000;
+  stroke: #bbbbbb;
 }
 
 .TitleBar {
@@ -83,7 +98,7 @@ body {
 }
 
 .TitleBar__nameplate {
-  font-size: 1.2rem;
+  font: 2.2rem 'Cookie', cursive;
   margin: 0 12px;
 }
 
@@ -94,6 +109,7 @@ body {
   border-bottom: 1px solid #ffffff;
   cursor: pointer;
   display: flex;
+  font: 13px 'Montserrat', sans-serif;
   outline: none;
   padding: 8px 12px;
   -webkit-tap-highlight-color: transparent;
