@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cookie&family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cookie&family=Montserrat:wght@400;700&display=swap');
 
 html {
   font: 13px 'Montserrat', sans-serif;
@@ -12,7 +12,9 @@ body {
   background-color: #eeeeee;
   color: #222222;
   height: 100%;
+  overflow-y: auto;
   position: fixed;
+  user-select: none;
   width: 100%;
 }
 
@@ -24,18 +26,85 @@ body {
   width: 1024px;
 }
 
+.Button {
+  cursor: pointer;
+  font: 13px 'Montserrat', sans-serif;
+  font-weight: 700;
+  outline: none;
+  padding: 8px 12px;
+  -webkit-tap-highlight-color: transparent;
+}
+
 .EventCreationForm {
   background-color: #ffffff;
   border: 1px solid #bbbbbb;
   border-radius: 2px;
   box-shadow: 0 4px 4px #cccccc;
   box-sizing: border-box;
+  display: flex;
+  flex-flow: column nowrap;
   margin: 16px 0;
-  padding: 24px;
+  padding: 24px 32px;
   position: relative;
 }
 
-.EventCreationForm__account-select {
+.EventCreationForm__body {
+  display: flex;
+  flex: 1 0 auto;
+  flex-flow: row wrap;
+  margin: 0 0 8px 0;
+}
+
+.EventCreationForm__buttons {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+}
+
+.EventCreationForm__header {
+  margin: 0 0 16px 0;
+}
+
+.EventCreationForm__ribbon {
+  height: 48px;
+  left: -1px;
+  position: absolute;
+  top: -1px;
+  width: 48px;
+}
+
+.EventCreationForm__ribbon-path {
+  fill: #008000;
+  stroke: #bbbbbb;
+}
+
+.EventCreationForm__submit-button {
+  background-color: #008000;
+  border: 1px solid #bbbbbb;
+  border-radius: 4px;
+  color: #ffffff;
+  min-width: 200px;
+}
+
+.EventCreationForm__submit-button:hover {
+  background-color: #007000;
+}
+
+.EventCreationForm__submit-button:active {
+  background-color: #006000;
+}
+
+.FormControl {
+  display: flex;
+  flex-flow: column nowrap;
+  margin: 0 16px 16px 0;
+}
+
+.FormControl__label-text {
+  margin: 0 0 4px 0;
+}
+
+.SelectField__select {
   appearance: none;
   background-image: url(./images/expand_more-24px.svg);
   background-repeat: no-repeat;
@@ -49,33 +118,13 @@ body {
   padding: 4px 24px 4px 8px;
 }
 
-.EventCreationForm__currency-input {
+.TextField__input {
   border: 1px solid #bbbbbb;
   border-radius: 2px;
   box-shadow: 0 2px 2px #cccccc;
   color: #222222;
-  cursor: pointer;
   font: 13px 'Montserrat', sans-serif;
   padding: 4px 8px;
-}
-
-.EventCreationForm__label {
-  margin: 0 4px;
-}
-
-.EventCreationForm__label-text {
-  margin: 0 6px;
-}
-
-.EventCreationForm__ribbon {
-  left: -1px;
-  position: absolute;
-  top: -1px;
-}
-
-.EventCreationForm__ribbon-path {
-  fill: #008000;
-  stroke: #bbbbbb;
 }
 
 .TitleBar {
@@ -84,7 +133,7 @@ body {
   box-shadow: 0 8px 8px #cccccc;
   position: sticky;
   top: 0;
-  user-select: none;
+  z-index: 1;
 }
 
 .TitleBar__content {
@@ -107,12 +156,7 @@ body {
   background-color: #ffffff;
   border: none;
   border-bottom: 1px solid #ffffff;
-  cursor: pointer;
   display: flex;
-  font: 13px 'Montserrat', sans-serif;
-  outline: none;
-  padding: 8px 12px;
-  -webkit-tap-highlight-color: transparent;
 }
 
 .TitleBar__user-button:hover {
@@ -126,36 +170,30 @@ body {
 
 .TitleBar__user-name {
   font-size: 1rem;
-  font-weight: bold;
   margin: 0 4px;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 640px) {
   .EventCreationForm {
-    display: flex;
-    flex-flow: column wrap;
+    padding: 24px;
+  }
+  
+  .EventCreationForm__body {
+    flex-flow: column nowrap;
   }
 
-  .EventCreationForm__account-select {
+  .EventCreationForm__buttons {
+    flex-flow: column nowrap;
+    justify-content: stretch;
+  }
+
+  .EventCreationForm__ribbon {
+    height: 42px;
+    width: 42px;
+  }
+  
+  .FormControl {
     flex: 1 0 auto;
-  }
-
-  .EventCreationForm__currency-input {
-    flex: 1 0 auto;
-  }
-
-  .EventCreationForm__label {
-    align-items: center;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: flex-end;
-    margin: 8px 0;
-    width: 100%;
-  }
-
-  .EventCreationForm__label-text {
-    flex: 0 0 25%;
-    margin: 0 8px;
-    text-align: right;
+    margin: 0 0 16px 0;
   }
 }

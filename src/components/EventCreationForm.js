@@ -1,29 +1,35 @@
 import React from "react";
+import Button from "./Button";
+import SelectField from "./SelectField";
+import TextField from "./TextField";
 
 export default function EventCreationForm() {
   return (
     <form className="EventCreationForm">
-      <svg className="EventCreationForm__ribbon" width={50} height={50} viewBox="0 0 50 50">
-        <path className="EventCreationForm__ribbon-path" d="M 25,0 L 50,0 L 0,50 L 0,25 Z" />
+      <svg className="EventCreationForm__ribbon" viewBox="0 0 48 48">
+        <path className="EventCreationForm__ribbon-path" d="M 24,0 L 48,0 L 0,48 L 0,24 Z" />
       </svg>
-      <label className="EventCreationForm__label">
-        <span className="EventCreationForm__label-text">Transfer</span>
-        <input className="EventCreationForm__currency-input" />
-      </label>
-      <label className="EventCreationForm__label">
-        <span className="EventCreationForm__label-text">From</span>
-        <select className="EventCreationForm__account-select">
+      <h2 className="EventCreationForm__header">
+        Record a transaction
+      </h2>
+      <div className="EventCreationForm__body">
+        <TextField labelText="Description"/>
+        <TextField labelText="Amount" />
+        <SelectField labelText="From">
           <option>Income</option>
-          <option>New Account...</option>
-        </select>
-      </label>
-      <label className="EventCreationForm__label">
-        <span className="EventCreationForm__label-text">Into</span>
-        <select className="EventCreationForm__account-select">
+          <option>Create an account...</option>
+        </SelectField>
+        <SelectField labelText="Into">
           <option>Expense</option>
-          <option>New Account...</option>
-        </select>
-      </label>
+          <option>Create an account...</option>
+        </SelectField>
+        <TextField labelText="Category" />
+      </div>
+      <div className="EventCreationForm__buttons">
+        <Button className="EventCreationForm__submit-button" type="submit">
+          Save
+        </Button>
+      </div>
     </form>
   );
 }
