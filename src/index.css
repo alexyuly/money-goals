@@ -48,17 +48,22 @@ body {
   position: relative;
 }
 
-.EventCreationForm__body {
-  display: flex;
-  flex: 1 0 auto;
-  flex-flow: row wrap;
-  margin: 0 0 8px 0;
+.EventCreationForm__amount-input {
+  width: 64px;
 }
 
 .EventCreationForm__buttons {
   display: flex;
   flex-flow: row nowrap;
   justify-content: flex-end;
+}
+
+.EventCreationForm__category-input {
+  width: 96px;
+}
+
+.EventCreationForm__description-input {
+  width: 240px;
 }
 
 .EventCreationForm__header {
@@ -76,6 +81,13 @@ body {
 .EventCreationForm__ribbon-path {
   fill: #008000;
   stroke: #bbbbbb;
+}
+
+.EventCreationForm__section {
+  display: flex;
+  flex: 1 0 auto;
+  flex-flow: row wrap;
+  margin: 0 0 8px 0;
 }
 
 .EventCreationForm__submit-button {
@@ -177,10 +189,6 @@ body {
   .EventCreationForm {
     padding: 24px;
   }
-  
-  .EventCreationForm__body {
-    flex-flow: column nowrap;
-  }
 
   .EventCreationForm__buttons {
     flex-flow: column nowrap;
@@ -190,10 +198,5 @@ body {
   .EventCreationForm__ribbon {
     height: 42px;
     width: 42px;
-  }
-  
-  .FormControl {
-    flex: 1 0 auto;
-    margin: 0 0 16px 0;
   }
 }
