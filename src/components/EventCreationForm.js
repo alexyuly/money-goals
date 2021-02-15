@@ -3,17 +3,24 @@ import Button from "./Button";
 import CurrencyField from "./CurrencyField";
 import SelectField from "./SelectField";
 import TextField from "./TextField";
+import useEventCreationForm from "../hooks/useEventCreationForm";
 
 export default function EventCreationForm() {
-  const [description, setDescription] = React.useState('');
-  const [amount, setAmount] = React.useState(0);
-  const [category, setCategory] = React.useState('');
+  const {
+    amount,
+    category,
+    description,
+    handleSubmit,
+    setAmount,
+    setCategory,
+    setDescription,
+  } = useEventCreationForm();
 
   return (
-    <form className="EventCreationForm">
-      {/* <svg className="EventCreationForm__ribbon" viewBox="0 0 48 48">
-        <path className="EventCreationForm__ribbon-path" d="M 24,0 L 48,0 L 0,48 L 0,24 Z" />
-      </svg> */}
+    <form
+      className="EventCreationForm"
+      onSubmit={handleSubmit}
+    >
       <h2 className="EventCreationForm__header">
         Record a transaction
       </h2>
