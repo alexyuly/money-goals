@@ -1,14 +1,12 @@
 import React from "react";
-import EventCreationForm from "./EventCreationForm";
 import EventTimeline from "./EventTimeline";
-import TitleBar from "./TitleBar";
+import Navigation from "./Navigation";
 
 export default function App() {
   return (
     <div className="App">
-      <TitleBar />
       <div className="App__content">
-        <EventCreationForm />
+        <Navigation />
         <EventTimeline />
       </div>
     </div>

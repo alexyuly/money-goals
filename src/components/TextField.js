@@ -3,7 +3,11 @@ import FormControl from "./FormControl";
 
 export default function TextField(props) {
   function handleChange(event) {
-    props.onChangeValue(event.target.value);
+    props.setValue(event.target.value);
+  }
+
+  function handleFocus(event) {
+    event.target.select();
   }
 
   return (
@@ -12,6 +16,8 @@ export default function TextField(props) {
         className={`TextField__input ${props.inputClassName ?? ''}`}
         onBlur={props.onBlur}
         onChange={handleChange}
+        onFocus={handleFocus}
+        type="text"
         value={props.value}
       />
     </FormControl>

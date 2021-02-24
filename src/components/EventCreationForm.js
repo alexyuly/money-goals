@@ -21,15 +21,18 @@ export default function EventCreationForm() {
       className="EventCreationForm"
       onSubmit={handleSubmit}
     >
-      <h2 className="EventCreationForm__header">
-        Record a transaction
-      </h2>
       <div className="EventCreationForm__section">
         <TextField
           inputClassName="EventCreationForm__description-input"
           labelText="Description"
-          onChangeValue={setDescription}
+          setValue={setDescription}
           value={description}
+        />
+        <TextField
+          inputClassName="EventCreationForm__category-input"
+          labelText="Category"
+          setValue={setCategory}
+          value={category}
         />
         <CurrencyField
           inputClassName="EventCreationForm__amount-input"
@@ -45,21 +48,15 @@ export default function EventCreationForm() {
           <option>Expense</option>
           <option>Create an account...</option>
         </SelectField>
-        <TextField
-          inputClassName="EventCreationForm__category-input"
-          labelText="Category"
-          onChangeValue={setCategory}
-          value={category}
-        />
       </div>
-      <div className="EventCreationForm__buttons">
+      {/* <div className="EventCreationForm__buttons">
         <Button
           className="EventCreationForm__submit-button"
           type="submit"
         >
           Save
         </Button>
-      </div>
+      </div> */}
     </form>
   );
 }

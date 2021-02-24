@@ -14,7 +14,7 @@ export default function CurrencyField(props) {
       inputClassName={props.inputClassName}
       labelText={props.labelText}
       onBlur={handleBlur}
-      onChangeValue={setTempValue}
+      setValue={setTempValue}
       value={tempValue}
     />
   );
